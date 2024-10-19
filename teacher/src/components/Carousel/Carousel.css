@@ -1,0 +1,72 @@
+.mt-100{
+    margin-top: 100px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.classCarousel {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.carousel {
+    display: flex;
+    width: 100%;
+    
+}
+.skills {
+    height: 5vh;
+    overflow: hidden; 
+    white-space: nowrap; 
+    position: relative;
+}
+.skills:last-child{
+    margin-top: 30px;
+}
+
+.scroll-container {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+}
+.scrollRight-container {
+    display: inline-block;
+    animation: scrollRight 15s linear infinite;
+}
+.skills-btn {
+    margin-right: 1vw;
+    font-size: .7vw;
+    color: #FFF;
+    border: #49c5b6 1px solid;
+    width: 8vw;
+    height: 5vh;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: 
+        inset 0 0 1em #49c5b6, 
+        0 0 .5em #49c5b6;
+    white-space: nowrap; /* Не переносить текст кнопки */
+    display: inline-block; /* Отображает кнопки в ряд */
+}
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-20%); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-20%); 
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .skills-btn {
+        font-size: 1vh;
+        width: 6vh;
+        height: 3vh;
+    }
+}
