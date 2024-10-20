@@ -5,6 +5,10 @@ import SwiftIcon from "../svg/Swift";
 import JavaScriptIcon from "../svg/JavaScript";
 import PythonIcon from "../svg/Python";
 import Carousel from "../Carousel/Carousel";
+import CppIcon from "../svg/Cpp";
+import FigmaIcon from "../svg/Figma";
+import VueIcon from "../svg/Vue";
+import JavaIcon from "../svg/Java";
 
 const Hero = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -24,18 +28,79 @@ const Hero = () => {
         <Carousel reverse={false} />
         <div className="card">
           <div class="container">
-            <div data-text="Swift" style={{ "--r": -15 }} className="glass">
-              <SwiftIcon height={height} color="white"></SwiftIcon>
-            </div>
-            <div data-text="React" style={{ "--r": -10 }} className="glass">
-              <ReactIcon height={height} />
-            </div>
-            <div data-text="Python" style={{ "--r": 5 }} className="glass">
-              <PythonIcon height={height} />
-            </div>
-            <div data-text="JavaScript" style={{ "--r": 25 }} className="glass">
-              <JavaScriptIcon height={height} />
-            </div>
+            {width > 1000 ? (
+              <>
+                <div data-text="C++" style={{ "--r": -20 }} className="glass">
+                  <CppIcon height={height} color="white"></CppIcon>
+                </div>
+                <div data-text="Swift" style={{ "--r": -15 }} className="glass">
+                  <SwiftIcon height={height} color="white"></SwiftIcon>
+                </div>
+                <div data-text="React" style={{ "--r": -10 }} className="glass">
+                  <ReactIcon height={height} />
+                </div>
+                <div data-text="Python" style={{ "--r": 5 }} className="glass">
+                  <PythonIcon height={height} />
+                </div>
+                <div
+                  data-text="JavaScript"
+                  style={{ "--r": 10 }}
+                  className="glass"
+                >
+                  <JavaScriptIcon height={height} />
+                </div>
+                <div data-text="Vue" style={{ "--r": 15 }} className="glass">
+                  <VueIcon height={height} />
+                </div>
+                <div data-text="Java" style={{ "--r": 20 }} className="glass">
+                  <JavaIcon height={height} />
+                </div>
+              </>
+            ) : 
+            width > 500  ? (
+              <>
+                <div data-text="Swift" style={{ "--r": -15 }} className="glass">
+                  <SwiftIcon height={height} color="white"></SwiftIcon>
+                </div>
+                <div data-text="React" style={{ "--r": -10 }} className="glass">
+                  <ReactIcon height={height} />
+                </div>
+                <div data-text="Python" style={{ "--r": 5 }} className="glass">
+                  <PythonIcon height={height} />
+                </div>
+                <div
+                  data-text="JavaScript"
+                  style={{ "--r": 10 }}
+                  className="glass"
+                >
+                  <JavaScriptIcon height={height} />
+                </div>
+                <div data-text="Vue" style={{ "--r": 15 }} className="glass">
+                  <VueIcon height={height} />
+                </div>
+              </>
+            ) : 
+            (
+              <>
+                <div data-text="Swift" style={{ "--r": -15 }} className="glass">
+                  <SwiftIcon height={height} color="white"></SwiftIcon>
+                </div>
+                <div data-text="React" style={{ "--r": -10 }} className="glass">
+                  <ReactIcon height={height} />
+                </div>
+                <div data-text="Python" style={{ "--r": 5 }} className="glass">
+                  <PythonIcon height={height} />
+                </div>
+                <div
+                  data-text="JavaScript"
+                  style={{ "--r": 10 }}
+                  className="glass"
+                >
+                  <JavaScriptIcon height={height} />
+                </div>
+              </>
+            )
+            }
           </div>
         </div>
 
